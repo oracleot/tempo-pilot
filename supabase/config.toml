@@ -1,0 +1,8 @@
+# Supabase Configuration
+
+[functions.ai_proxy]
+# Supabase runtime verification is disabled because the function performs
+# its own JWT validation using the service role. This avoids the opaque
+# 401 "Invalid JWT" errors seen when the runtime can't parse tester tokens
+# while still enforcing authentication server-side.
+verify_jwt = false
